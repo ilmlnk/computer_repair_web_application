@@ -15,14 +15,16 @@
 - Log4j and SLF4j (logging);
 - REST.
 
-## Used Technologies for Testing:
-- JUnit;
-- Mockito.
-
 ### Front-end:
 - HTML;
 - CSS;
 - JS;
 - jQuery;
 - Bootstrap.
+
+## Used Technologies for Testing:
+- JUnit;
+- Mockito.
+
+
 
