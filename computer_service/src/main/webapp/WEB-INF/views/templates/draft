@@ -1,0 +1,107 @@
+<!--<nav class="sidebar close">-->
+<!--    <header>-->
+<!--        <div class="text logo-text">-->
+<!--            <span class="name">Computer Repair Website</span>-->
+<!--            <span class="profession">Full-Stack Developer</span>-->
+<!--        </div>-->
+<!--        <i class='bx bx-chevron-right toggle'></i>-->
+<!--    </header>-->
+
+<!--    <div class="menu-bar">-->
+<!--        <div class="menu">-->
+
+<!--            <ul class="menu-links">-->
+<!--                <li class="nav-link">-->
+<!--                    <a href="#home">-->
+<!--                        <i class='bx bx-home-alt icon'></i>-->
+<!--                        <span class="text nav-text">Начало</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-link">-->
+<!--                    <a href="#about_us">-->
+<!--                        <i class='bx bxs-user-detail icon'></i>-->
+<!--                        <span class="text nav-text">О нас</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-link">-->
+<!--                    <a href="#service">-->
+<!--                        <i class='bx bx-list-check icon'></i>-->
+<!--                        <span class="text nav-text">Услуги</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-link">-->
+<!--                    <a href="#prices">-->
+<!--                        <i class='bx bx-dollar icon'></i>-->
+<!--                        <span class="text nav-text">Цены</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-link">-->
+<!--                    <a href="#stat">-->
+<!--                        <i class='bx bxs-contact icon'></i>-->
+<!--                        <span class="text nav-text">Контакты</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+<!--                <li class="nav-link">-->
+<!--                    <a href="#">-->
+<!--                        <i class='bx bx-globe icon'></i>-->
+<!--                        <span class="text nav-text">Сменить язык</span>-->
+<!--                    </a>-->
+<!--                </li>-->
+
+<!--            </ul>-->
+<!--        </div>-->
+
+<!--        <script>-->
+<!--            const body = document.querySelector('body'),-->
+<!--                sidebar = body.querySelector('nav'),-->
+<!--                toggle = body.querySelector(".toggle"),-->
+<!--                searchBtn = body.querySelector(".search-box"),-->
+<!--                modeSwitch = body.querySelector(".toggle-switch"),-->
+<!--                modeText = body.querySelector(".mode-text");-->
+
+
+<!--            toggle.addEventListener("click" , () =>{-->
+<!--                sidebar.classList.toggle("close");-->
+<!--            })-->
+
+<!--            searchBtn.addEventListener("click" , () =>{-->
+<!--                sidebar.classList.remove("close");-->
+<!--            })-->
+
+<!--            modeSwitch.addEventListener("click" , () =>{-->
+<!--                body.classList.toggle("dark");-->
+
+<!--                if(body.classList.contains("dark")){-->
+<!--                    modeText.innerText = "Светлый режим";-->
+<!--                }else{-->
+<!--                    modeText.innerText = "Темный режим";-->
+
+<!--                }-->
+<!--            });-->
+<!--        </script>-->
+
+
+
+<!--        &lt;!&ndash; &ndash;&gt;-->
+<!--        <div class="bottom-content">-->
+<!--            <li class="mode">-->
+<!--                <div class="sun-moon">-->
+<!--                    <i class='bx bx-moon icon moon'></i>-->
+<!--                    <i class='bx bx-sun icon sun'></i>-->
+<!--                </div>-->
+<!--                <span class="mode-text text">Темный режим</span>-->
+
+<!--                <div class="toggle-switch">-->
+<!--                    <span class="switch"></span>-->
+<!--                </div>-->
+<!--            </li>-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</nav>-->
