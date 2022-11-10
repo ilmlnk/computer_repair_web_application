@@ -39,13 +39,13 @@ public class Request {
             nullable = false,
             columnDefinition = "TEXT"
     )
-    private String userName;
+    private String name;
     @Column(
             name = "user_surname",
             nullable = false,
             columnDefinition = "TEXT"
     )
-    private String userSurname;
+    private String surname;
     @Column(
             name = "phone_number",
             nullable = false,
@@ -63,10 +63,10 @@ public class Request {
     )
     private LocalTime requestTime;
 
-    public Request(String userName, String userSurname, String phoneNumber,
+    public Request(String name, String surname, String phoneNumber,
                    LocalDate requestDate, LocalTime requestTime) {
-        this.userName = userName;
-        this.userSurname = userSurname;
+        this.name = name;
+        this.surname = surname;
         this.phoneNumber = phoneNumber;
         this.requestDate = requestDate;
         this.requestTime = requestTime;

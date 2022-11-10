@@ -12,25 +12,19 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.sql.DataSource;
+import java.io.File;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class ComputerServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ComputerServiceApplication.class, args);
-	}
-
-	@Bean
-	CommandLineRunner commandLineRunner(RequestRepository requestRepository) {
-		return args -> {
-			Request request = new Request("Illia", "Melnyk",
-					"+380970894434", LocalDate.now(), LocalTime.now());
-			requestRepository.save(request);
-		};
 	}
 
 }

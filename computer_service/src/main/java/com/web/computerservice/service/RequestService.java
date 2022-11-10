@@ -16,8 +16,8 @@ public class RequestService {
 
     public Request saveRequest(Request userRequest) {
         Request request = new Request();
-        request.setUserName(userRequest.getUserName());
-        request.setUserSurname(userRequest.getUserSurname());
+        request.setName(userRequest.getName());
+        request.setSurname(userRequest.getSurname());
         request.setPhoneNumber(userRequest.getPhoneNumber());
         request.setRequestDate(userRequest.getRequestDate());
         request.setRequestTime(userRequest.getRequestTime());
