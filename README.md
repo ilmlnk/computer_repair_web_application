@@ -11,12 +11,12 @@
 - PostgreSQL;
 - Liquibase; 
 - Java Persistence API;
-- Thymeleaf;
-- Log4j and SLF4j (logging);
-- REST.
+- FreeMarker;
+- Log4j and SLF4j (logging).
 
 ## Used Technologies for Testing:
 - JUnit;
+- Spring Test;
 - Mockito.
 
 ### Front-end:
