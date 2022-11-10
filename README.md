@@ -14,15 +14,19 @@
 - FreeMarker;
 - Log4j and SLF4j (logging).
 
-## Used Technologies for Testing:
-- JUnit;
-- Spring Test;
-- Mockito.
-
 ### Front-end:
 - HTML;
 - CSS;
 - JS;
 - jQuery;
 - Bootstrap.
+
+---
+
+## Used Technologies for Testing:
+- JUnit;
+- Spring Test;
+- Mockito.
+
+
 
