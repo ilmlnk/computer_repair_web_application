@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd232ca5-3ddf-4c57-9c03-05f202715f5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/README.md.time" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/config/MvcWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/config/MvcWebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/controller/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/controller/RequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/exceptions/ErrorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/exceptions/ErrorDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/repo/RequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/repo/RequestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/service/RequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/service/RequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer_service/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/computer_service/src/main/resources/templates/index.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/computer_service/src/main/java/com/web/computerservice/service/RequestServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/computer_service/src/main/resources/templates/error.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667846465096</updated>
       <workItem from="1667846467651" duration="117000" />
-      <workItem from="1667846591258" duration="1738000" />
+      <workItem from="1667846591258" duration="1740000" />
     </task>
     <servers />
   </component>
