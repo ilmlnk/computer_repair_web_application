@@ -11,13 +11,8 @@
 - PostgreSQL;
 - Liquibase; 
 - Java Persistence API;
-- Thymeleaf;
-- Log4j and SLF4j (logging);
-- REST.
-
-## Used Technologies for Testing:
-- JUnit;
-- Mockito.
+- FreeMarker;
+- Log4j and SLF4j (logging).
 
 ### Front-end:
 - HTML;
@@ -25,4 +20,13 @@
 - JS;
 - jQuery;
 - Bootstrap.
+
+---
+
+## Used Technologies for Testing:
+- JUnit;
+- Spring Test;
+- Mockito.
+
+
 
