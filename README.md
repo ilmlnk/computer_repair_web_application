@@ -12,7 +12,8 @@
 - Liquibase; 
 - Java Persistence API;
 - FreeMarker;
-- Log4j and SLF4j (logging).
+- Log4j and SLF4j (logging);
+- REST API.
 
 ### Front-end:
 - HTML;

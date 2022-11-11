@@ -93,6 +93,126 @@ body.dark{
 
 /* Navigation Bar Style */
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background: var(--sidebar-color);
+    z-index: 100;
+    padding: 14px 20px;
+    -webkit-box-shadow: 24px 32px 37px -45px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 24px 32px 37px -45px rgba(66, 68, 90, 1);
+    box-shadow: 24px 32px 37px -45px rgba(66, 68, 90, 1);
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.darken_filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.darken_filter.action {
+    opacity: 1;
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .text_description {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.header_title_sidebar {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 25%;
+    color: var(--sidebar-color);
+}
+
+.menu {
+    padding-top: 1.5em;
+}
+
+.menu_links {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_link_text_icon, span.nav_link_text_icon, i.nav_link_text_icon {
+    color: #18191a;
+    /*color: var(--text-color);*/
+    text-decoration: none;
+}
+
+.nav_link_text_icon {
+    font-size: 20px;
+    display: flex;
+    margin-left: 10px;
+    transition: var(--tran-04);
+}
+
+.nav_link_text {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav_link {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    list-style-type: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.nav_link i {
+    font-size: 30px;
+}
+
+.nav_link {
+    transition: var(--tran-04);
+}
+
+.nav_link:hover {
+    background: var(--primary-color);
+    /*background: var(--toggle-color);*/
+}
+
+.nav_link a:hover {
+    color: #fff;
+}
+
 
 /* Home Wrapper Style */
 
@@ -650,6 +770,8 @@ span.text {
 
 .prices_block_content {
     background-color: #695CFE;
+    border-radius: 2em;
+    padding: 0 2em 2em;
 }
 
 
@@ -697,8 +819,7 @@ span.text {
 }
 
 .we_are_trusted_wrapper {
-    height: 100%;
-    padding-top: 25em;
+    height: 1251px;
     margin-top: 10em;
     margin-left: -8px;
     margin-right: -8px;

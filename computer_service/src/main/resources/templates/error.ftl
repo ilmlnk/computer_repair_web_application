@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css"/>
+    <title>${title}</title>
 </head>
 <body>
 <div class="container">

@@ -28,7 +28,7 @@ public class RestApiController {
         this.requestService = requestService;
     }
 
-    @RequestMapping(value = "/request/", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/request/", method = RequestMethod.GET)
     public ResponseEntity<List<Request>> listAllRequests() {
         List<Request> requests = StreamSupport
                 .stream(requestService.findAllRequests().spliterator(), false)
@@ -38,7 +38,7 @@ public class RestApiController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(requests, HttpStatus.OK);
-    }
+    }*/
 
     @RequestMapping(value = "/request/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getRequest(@PathVariable("id") long id) {

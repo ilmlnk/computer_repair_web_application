@@ -30,9 +30,11 @@ public class RequestController {
     @RequestMapping(value = "/new_request")
     public String showForm(@Valid Request request, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "index";
+            model.addAttribute("title", result);
+            return "error";
         }
         requestRepository.save(request);
         return "index";
     }
+
 }

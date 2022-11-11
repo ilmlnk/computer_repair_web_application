@@ -22,7 +22,6 @@ public class MvcWebConfig implements WebMvcConfigurer {
     public FreeMarkerViewResolver freeMakerViewResolver() {
         FreeMarkerViewResolver resolver = new FreeMarkerViewResolver();
         resolver.setCache(true);
-        resolver.setPrefix("/templates/**");
         resolver.setSuffix(".ftl");
         return resolver;
     }

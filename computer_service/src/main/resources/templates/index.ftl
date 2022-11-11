@@ -1,7 +1,6 @@
-<#import "../templates/index.ftl" as spring/>
-<html>
+<!DOCTYPE html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-16"/>
     <title>Computer Repair - Fast, Reliable, Affordable</title>
 
     <!-- Shortcut Icon -->
@@ -27,6 +26,14 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 </head>
 
+
+
+
+
+<body id="main_content">
+
+
+<!-- Modal Window -->
 
 <div class="modal" id="modal_popup">
     <div class="modal_window">
@@ -80,9 +87,6 @@
     </script>
 </div>
 
-
-<body id="main_content">
-
 <!-- Back-To-Top Button with Scroll Progress -->
 <div id="progress">
     <i class='bx bxs-chevron-up' id="progress-value"></i>
@@ -90,11 +94,99 @@
 
 <!-- Sidebar Navigation Panel -->
 
+<div class="darken_filter"></div>
+
+<nav class="sidebar">
+    <header>
+        <div class="header_text_description text_description">
+            <span class="header_title_sidebar">Computer Repair</span>
+            <span class="header_text_sidebar">Full-Stack Development</span>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+    </header>
+
+    <div class="menu_bar">
+        <div class="menu">
+            <ul class="menu_links">
+                <li class="nav_link">
+                    <a class="nav_link_text_icon main_link" href="#home">
+                        <i class='bx bx-home-alt'></i>
+                        <span class="nav_link_text">Main</span>
+                    </a>
+                </li>
+                <li class="nav_link">
+                    <a class="nav_link_text_icon about_us_link" href="#">
+                        <i class='bx bx-group'></i>
+                        <span class="nav_link_text">About us</span>
+                    </a>
+                </li>
+                <li class="nav_link">
+                    <a class="nav_link_text_icon services_link" href="#">
+                        <i class='bx bxs-cog'></i>
+                        <span class="nav_link_text">Services</span>
+                    </a>
+                </li>
+                <li class="nav_link">
+                    <a class="nav_link_text_icon prices_link" href="#">
+                        <i class='bx bxs-dollar-circle'></i>
+                        <span class="nav_link_text">Prices</span>
+                    </a>
+                </li>
+                <li class="nav_link">
+                    <a class="nav_link_text_icon trusted_link" href="#">
+                        <i class='bx bx-happy-beaming' ></i>
+                        <span class="nav_link_text">We are Trusted!</span>
+                    </a>
+                </li>
+                <li class="nav_link">
+                    <a class="nav_link_text_icon employee_link" href="#">
+                        <i class='bx bxs-user-badge'></i>
+                        <span class="nav_link_text">For Employees</span>
+                    </a>
+                </li>
+                <li class="nav_link">
+                    <a class="nav_link_text_icon language_link" href="#">
+                        <i class='bx bx-globe' ></i>
+                        <span class="nav_link_text">Change language</span>
+                        <ul class="language_list">
+                            <li class="language_mark english">
+                                <span>English</span>
+                            </li>
+                            <li class="language_mark ukrainian">
+                                <span>Ukrainian</span>
+                            </li>
+                            <li class="language_mark polish">
+                                <span>Polish</span>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+            </ul>
+
+            <footer>
+                <li class="nav_link join_our_team">
+                    <a href="#" class="nav_link_text_icon">
+                        <i class='bx bx-user-plus'></i>
+                        <span class="nav_link_text">Join our team</span>
+                    </a>
+                </li>
+
+                <li class="nav_link dark_mode">
+                    <a href="#" class="nav_link_text_icon">
+                        <i class='bx bxs-moon'></i>
+                        <span class="nav_link_text">Dark mode</span>
+                    </a>
+                </li>
+            </footer>
+        </div>
+    </div>
+</nav>
+
 
 <!-- Main Wrapper -->
 <div class="main_wrapper">
     <!-- Home Wrapper -->
-    <div class="home_wrapper">
+    <div class="home_wrapper" id="home">
 
         <!-- Home title -->
         <div class="home_content content">
@@ -381,8 +473,8 @@
     <div class="">
         <div class="contact_us_content content">
             <div>
-                <h2>Доверьте ремонт вашего компьютера профессионалам!</h2>
-                <p>Заказывайте услуги прямо сейчас!</p>
+                <h2>Entrust the repair of your computer to professionals today.</h2>
+                <p>Order services right now!</p>
             </div>
             <button type="button" class="create_request btn btn-primary" data-toggle="modal" data-target="#exampleModal"
                     data-whatever="@mdo">Leave Request
@@ -467,4 +559,3 @@
         crossorigin="anonymous"></script>
 
 </body>
-</html>
