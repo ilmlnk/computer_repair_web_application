@@ -1,6 +1,11 @@
 package com.web.computerservice.exceptions;
 
-public class ErrorDto {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ErrorDto extends Exception {
 
     private String message;
 
@@ -9,14 +14,6 @@ public class ErrorDto {
     }
 
     public ErrorDto(String message) {
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+        super(message);
     }
 }

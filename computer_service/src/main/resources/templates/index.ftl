@@ -1,3 +1,4 @@
+<#import "../templates/index.ftl" as spring/>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -40,17 +41,17 @@
                 <form class="modal_form" action="#" method="post">
 
                     <div class="modal_name_container field_container">
-                        Name: <input class="form_control user_name" id="name_text_field"
+                        <input class="form_control user_name" id="name_text_field"
                                type="text" name="name" placeholder="Your first name">
                     </div>
 
                     <div class="modal_surname_container field_container">
-                        Surname: <input class="form_control user_surname" id="surname_text_field"
+                        <input class="form_control user_surname" id="surname_text_field"
                                type="text" name="surname" placeholder="Your last name">
                     </div>
 
                     <div class="modal_phone_container field_container">
-                        Phone: <input class="form_control user_phone_number" id="phone_number_text_field"
+                        <input class="form_control user_phone_number" id="phone_number_text_field"
                                type="text" name="phone" placeholder="Your phone number">
                     </div>
                 </form>
