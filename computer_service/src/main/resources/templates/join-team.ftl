@@ -1,3 +1,4 @@
+<#--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,4 +8,16 @@
 <body>
 
 </body>
-</html>
+</html>-->
+
+<#import "parts/common.ftl" as c>
+
+<@c.main_page>
+    <title>Join our Team!</title>
+
+    <body>
+        <h1>Join our Team!</h1>
+
+    </body>
+
+</@c.main_page>

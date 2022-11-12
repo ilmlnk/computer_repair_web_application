@@ -29,8 +29,11 @@
 </head>-->
 
 <#import "parts/common.ftl" as c>
+<#import "parts/scripts-macros.ftl" as sc>
 
-<@c.page>
+<@c.main_page>
+    <title>Computer Repair Service - Fast, Reliable, Affordable</title>
+
 <body id="main_content">
 
 <!-- Modal Window -->
@@ -140,7 +143,7 @@
                     </a>
                 </li>
                 <li class="nav_link">
-                    <a class="nav_link_text_icon employee_link" href="/employee">
+                    <a class="nav_link_text_icon employee_link" href="/@{/}">
                         <i class='bx bxs-user-badge'></i>
                         <span class="nav_link_text">For Employees</span>
                     </a>
@@ -560,17 +563,10 @@
 
 <!-- Optional JS scripts -->
 
-<#--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>-->
+<@sc.optional_scripts>
+</@sc.optional_scripts>
 
 </body>
-</@c.page>
+</@c.main_page>
 <#--
 </html>-->

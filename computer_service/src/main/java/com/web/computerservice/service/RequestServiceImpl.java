@@ -31,16 +31,6 @@ public class RequestServiceImpl implements RequestService {
     }
 
     @Override
-    public Request findRequestByName(String name) {
-        return requestRepository.findByName(name);
-    }
-
-    @Override
-    public Request findRequestBySurname(String surname) {
-        return requestRepository.findBySurname(surname);
-    }
-
-    @Override
     public void saveRequest(Request request) {
         requestRepository.save(request);
     }
@@ -78,10 +68,5 @@ public class RequestServiceImpl implements RequestService {
     @Override
     public void deleteAllRequests(Iterable<Request> requests) {
         requestRepository.deleteAll(requests);
-    }
-
-    @Override
-    public boolean isRequestExists(Request request) {
-        return findRequestByName(request.getName()) != null;
     }
 }

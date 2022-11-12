@@ -1,3 +1,4 @@
+<#--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,4 +14,11 @@
 </div>
 </body>
 
-</html>
+</html>-->
+
+<#import "parts/common.ftl" as c>
+
+<@c.main_page>
+    <title>${error}</title>
+
+</@c.main_page>

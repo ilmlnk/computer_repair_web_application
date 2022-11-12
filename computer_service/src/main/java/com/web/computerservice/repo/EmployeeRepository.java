@@ -1,9 +1,8 @@
 package com.web.computerservice.repo;
 
-import com.web.computerservice.model.Request;
+import com.web.computerservice.model.Employee;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RequestRepository extends CrudRepository<Request, Long> {
-}
+public interface EmployeeRepository extends CrudRepository<Employee, Long> {}

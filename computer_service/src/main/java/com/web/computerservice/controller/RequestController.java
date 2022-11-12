@@ -42,29 +42,4 @@ public class RequestController {
         return "index";
     }
 
-    /*
-    * Verification control for employees.
-    * */
-    @RequestMapping(value = "/employee", method = RequestMethod.POST)
-    public String employeeVerification() {
-        return "redirect:/employee";
-    }
-
-    /*
-    * Opening employee log-in page.
-    * */
-
-    @RequestMapping(value = "/employee", method = RequestMethod.GET)
-    public String employeePage() {
-        return "redirect:/employee";
-    }
-
-    /*
-    * Opening form for joining team.
-    * */
-    @RequestMapping(value = "/join", method = RequestMethod.GET)
-    public String joinTeamPage() {
-        return "join-team";
-    }
-
 }

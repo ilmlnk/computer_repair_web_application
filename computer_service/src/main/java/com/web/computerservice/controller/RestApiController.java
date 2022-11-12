@@ -18,7 +18,7 @@ public class RestApiController {
 
     public static final Logger logger = LoggerFactory.getLogger(RestApiController.class);
 
-    public final RequestService requestService;
+    private final RequestService requestService;
 
     public RestApiController(RequestService requestService) {
         this.requestService = requestService;
