@@ -93,20 +93,19 @@ function countStatistics() {
     };
 }
 
-function modalHandler() {
-    document.querySelector("#modal_popup").addEventListener("click", () => {
-        document.querySelector(".modal").classList.add("active");
-    });
-
-    document.querySelector(".modal .close_btn").addEventListener("click", () => {
-        document.querySelector(".modal").classList.remove("active");
-    });
-
-
-    document.getElementsByClassName("create_request").onclick = enterWindow;
-}
+// function modalHandler() {
+//     document.querySelector("#modal_popup").addEventListener("click", () => {
+//         document.querySelector(".modal").classList.add("active");
+//     });
+//
+//     document.querySelector(".modal .close_btn").addEventListener("click", () => {
+//         document.querySelector(".modal").classList.remove("active");
+//     });
+//
+//
+//     document.getElementsByClassName("create_request").onclick = enterWindow;
+// }
 
 runningTitle();
 showScrollProgress();
 countStatistics();
-modalHandler();

@@ -13,6 +13,7 @@
 
     <!-- JS scripts -->
     <script type="text/javascript" src="../static/script.js"></script>
+<#--    <script type="text/javascript" src="../static/modal-window.js"></script>-->
     <!-- Подключение jQuery плагина Masked Input -->
     <script src="../static/jquery-3.6.1.js"></script>
     <script src="../static/jquery.maskedinput.js"></script>
@@ -26,25 +27,20 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
 </head>
 
-
-
-
-
 <body id="main_content">
-
 
 <!-- Modal Window -->
 
 <div class="modal" id="modal_popup">
     <div class="modal_window">
         <div class="modal_window_header">
-            <div class="close_btn" id="close">&times;</div>
+            <div class="close_btn" onclick="document.getElementById('modal_popup').style.display='none'"
+                 id="close">&times;</div>
             <h2>Create request</h2>
             <p>Leave your contacts and we will go around in short time!</p>
         </div>
         <div class="modal_window_content">
 
-            <fieldset>
                 <form class="modal_form" action="#" method="post">
 
                     <div class="modal_name_container field_container">
@@ -65,18 +61,18 @@
 
                 <div class="modal_window_footer">
                     <!-- Cancel Button -->
-                    <button type="button" class="btn btn-primary cancel_button"
+                    <button type="button" class="btn btn-primary cancel_button" id="modal_cancel"
                             data-toggle="modal" data-target="#modal"
+                            onclick="document.getElementById('modal_popup').style.display='none'"
                             data-whatever="@mdo">Cancel
                     </button>
 
                     <!-- Accept Button -->
-                    <button type="button" class="btn btn-primary accept_button"
+                    <button type="button" class="btn btn-primary accept_button" id="modal_accept"
                             data-toggle="modal" data-target="#modal"
                             data-whatever="@mdo">Send
                     </button>
                 </div>
-            </fieldset>
         </div>
     </div>
 
@@ -94,7 +90,7 @@
 
 <!-- Sidebar Navigation Panel -->
 
-<div class="darken_filter"></div>
+<#--<div class="darken_filter"></div>-->
 
 <nav class="sidebar">
     <header>
@@ -222,7 +218,8 @@
 
             <button type="button" class="create_request btn btn-primary home_request"
                     data-toggle="modal" data-target="#modalWindow"
-                    data-whatever="@mdo">Leave Request
+                    data-whatever="@mdo" onclick="document.getElementById('modal_popup').style.display = 'block'">
+                Leave Request
             </button>
 
         </div>
@@ -354,7 +351,7 @@
             </div>
 
             <button type="button" class="create_request btn btn-primary contact_us" data-toggle="modal"
-                    data-target="#exampleModal"
+                    data-target="#exampleModal" onclick="document.getElementById('modal_popup').style.display = 'block'"
                     data-whatever="@mdo">Leave Request
             </button>
         </div>
@@ -476,8 +473,10 @@
                 <h2>Entrust the repair of your computer to professionals today.</h2>
                 <p>Order services right now!</p>
             </div>
-            <button type="button" class="create_request btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    data-whatever="@mdo">Leave Request
+            <button type="button" class="create_request btn btn-primary" data-toggle="modal"
+                    data-target="#exampleModal" onclick="document.getElementById('modal_popup').style.display = 'block'"
+                    data-whatever="@mdo">
+                Leave Request
             </button>
         </div>
     </div>

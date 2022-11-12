@@ -448,26 +448,34 @@ span.text {
     margin-bottom: -1px;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
-    top: -100%;
-    left: 50%;
-    opacity: 0;
+    top: 0;
+    left: 0;
+    display: none;
     z-index: 100;
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(2px);
-    transform: translate(-50%, -50%) scale(1.25);
-    transition: top 0ms ease-in-out 200ms,
+    transform: scale(1.25);
+    /*transition: top 0ms ease-in-out 200ms,
                 opacity 200ms ease-in-out 0ms,
-                transform 200ms ease-in-out 0ms;
+                transform 200ms ease-in-out 0ms;*/
+    overflow: hidden;
+    animation-name: animatetop;
 }
 
-.modal.active {
-    top: 50%;
-    opacity: 1;
+/*.modal:hover {
     transition: top 0ms ease-in-out 0ms,
                 opacity 200ms ease-in-out 0ms,
                 transform 200ms ease-in-out 0ms;
-    transform: translate(-50%, -50%) scale(1);
+}*/
+
+@keyframes animatetop {
+    from {}
+    to {
+        transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+        }
 }
 
 .modal_window {
