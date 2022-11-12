@@ -1,0 +1,5 @@
+POSTGRES
+username: postgres
+password: root
+
+PORT: 5433

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-16"/>
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <meta charset="UTF-8">
     <title>Computer Repair - Fast, Reliable, Affordable</title>
 
     <!-- Shortcut Icon -->
@@ -13,7 +15,6 @@
 
     <!-- JS scripts -->
     <script type="text/javascript" src="../static/script.js"></script>
-<#--    <script type="text/javascript" src="../static/modal-window.js"></script>-->
     <!-- Подключение jQuery плагина Masked Input -->
     <script src="../static/jquery-3.6.1.js"></script>
     <script src="../static/jquery.maskedinput.js"></script>
@@ -90,7 +91,8 @@
 
 <!-- Sidebar Navigation Panel -->
 
-<#--<div class="darken_filter"></div>-->
+
+<div class="darken_filter"></div>
 
 <nav class="sidebar">
     <header>
@@ -111,25 +113,25 @@
                     </a>
                 </li>
                 <li class="nav_link">
-                    <a class="nav_link_text_icon about_us_link" href="#">
+                    <a class="nav_link_text_icon about_us_link" href="#about_us">
                         <i class='bx bx-group'></i>
                         <span class="nav_link_text">About us</span>
                     </a>
                 </li>
                 <li class="nav_link">
-                    <a class="nav_link_text_icon services_link" href="#">
+                    <a class="nav_link_text_icon services_link" href="#service">
                         <i class='bx bxs-cog'></i>
                         <span class="nav_link_text">Services</span>
                     </a>
                 </li>
                 <li class="nav_link">
-                    <a class="nav_link_text_icon prices_link" href="#">
+                    <a class="nav_link_text_icon prices_link" href="#prices">
                         <i class='bx bxs-dollar-circle'></i>
                         <span class="nav_link_text">Prices</span>
                     </a>
                 </li>
                 <li class="nav_link">
-                    <a class="nav_link_text_icon trusted_link" href="#">
+                    <a class="nav_link_text_icon trusted_link" href="#stat">
                         <i class='bx bx-happy-beaming' ></i>
                         <span class="nav_link_text">We are Trusted!</span>
                     </a>
@@ -144,22 +146,24 @@
                     <a class="nav_link_text_icon language_link" href="#">
                         <i class='bx bx-globe' ></i>
                         <span class="nav_link_text">Change language</span>
-                        <ul class="language_list">
-                            <li class="language_mark english">
-                                <span>English</span>
-                            </li>
-                            <li class="language_mark ukrainian">
-                                <span>Ukrainian</span>
-                            </li>
-                            <li class="language_mark polish">
-                                <span>Polish</span>
-                            </li>
-                        </ul>
+                        <i class='bx bx-chevron-down'></i>
                     </a>
                 </li>
             </ul>
 
-            <footer>
+                    <#--<ul class="language_list">
+                            <li class="language_mark english">
+                                <span>&#127463; English</span>
+                            </li>
+                            <li class="language_mark ukrainian">
+                                <span>&#127462; Ukrainian</span>
+                            </li>
+                            <li class="language_mark polish">
+                                <span>&#127473; Polish</span>
+                            </li>
+                        </ul>-->
+
+            <footer class="nav_bar_footer">
                 <li class="nav_link join_our_team">
                     <a href="#" class="nav_link_text_icon">
                         <i class='bx bx-user-plus'></i>
@@ -169,8 +173,14 @@
 
                 <li class="nav_link dark_mode">
                     <a href="#" class="nav_link_text_icon">
-                        <i class='bx bxs-moon'></i>
+                        <div class="sun_moon">
+                            <i class='bx bxs-moon'></i>
+                            <i class='bx bxs-sun' ></i>
+                        </div>
                         <span class="nav_link_text">Dark mode</span>
+                        <div class="toggle_switch toggle_switch_dark_mode">
+                            <span class="switch"></span>
+                        </div>
                     </a>
                 </li>
             </footer>
@@ -558,3 +568,4 @@
         crossorigin="anonymous"></script>
 
 </body>
+</html>

@@ -13,7 +13,6 @@ import javax.validation.Valid;
 
 @Controller
 public class RequestController {
-    private static final int DAY = 86_400;              // in seconds
     private static final Logger logger = LoggerFactory.getLogger(RequestController.class);
 
     private final RequestRepository requestRepository;
@@ -22,19 +21,41 @@ public class RequestController {
         this.requestRepository = requestRepository;
     }
 
-    @RequestMapping(value = "/computer_service")                                // home page
+    /*
+    * Redirecting to home page for the first time.
+    * */
+    @RequestMapping(value = "/computer_service", method = RequestMethod.GET)
     public String index() {
         return "index";
     }
 
+    /*
+    * Creating new request in modal window.
+    * */
     @RequestMapping(value = "/new_request")
     public String showForm(@Valid Request request, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            model.addAttribute("title", result);
+            logger.error("Unable to create new request.");
             return "error";
         }
         requestRepository.save(request);
         return "index";
+    }
+
+    /*
+    * Opening log-in page for employees.
+    * */
+    @RequestMapping(value = "/employee", method = RequestMethod.GET)
+    public String employeePage() {
+        return "employee";
+    }
+
+    /*
+    * Opening form for joining team.
+    * */
+    @RequestMapping(value = "/join", method = RequestMethod.GET)
+    public String joinTeamPage() {
+        return "join-team";
     }
 
 }

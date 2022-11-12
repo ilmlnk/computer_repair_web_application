@@ -5,16 +5,12 @@ import com.web.computerservice.model.Request;
 import com.web.computerservice.service.RequestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/api")
@@ -27,18 +23,6 @@ public class RestApiController {
     public RestApiController(RequestService requestService) {
         this.requestService = requestService;
     }
-
-    /*@RequestMapping(value = "/request/", method = RequestMethod.GET)
-    public ResponseEntity<List<Request>> listAllRequests() {
-        List<Request> requests = StreamSupport
-                .stream(requestService.findAllRequests().spliterator(), false)
-                .collect(Collectors.toList());
-
-        if (requests.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(requests, HttpStatus.OK);
-    }*/
 
     @RequestMapping(value = "/request/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getRequest(@PathVariable("id") long id) {

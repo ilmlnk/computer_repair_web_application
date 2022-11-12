@@ -1,0 +1,11 @@
+/*@RequestMapping(value = "/request/", method = RequestMethod.GET)
+    public ResponseEntity<List<Request>> listAllRequests() {
+        List<Request> requests = StreamSupport
+                .stream(requestService.findAllRequests().spliterator(), false)
+                .collect(Collectors.toList());
+
+        if (requests.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(requests, HttpStatus.OK);
+    }*/
