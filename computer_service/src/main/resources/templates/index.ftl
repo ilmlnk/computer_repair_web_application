@@ -1,33 +1,36 @@
-<!DOCTYPE html>
+<#--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html"/>
     <meta charset="UTF-8">
-    <title>Computer Repair - Fast, Reliable, Affordable</title>
+    <title>Computer Repair Service - Fast, Reliable, Affordable</title>
 
-    <!-- Shortcut Icon -->
+    <!-- Shortcut Icon &ndash;&gt;
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Fonts -->
+    <!-- Fonts &ndash;&gt;
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
           rel="stylesheet"/>
 
-    <!-- JS scripts -->
+    <!-- JS scripts &ndash;&gt;
     <script type="text/javascript" src="../static/script.js"></script>
-    <!-- Подключение jQuery плагина Masked Input -->
+    <!-- Подключение jQuery плагина Masked Input &ndash;&gt;
     <script src="../static/jquery-3.6.1.js"></script>
     <script src="../static/jquery.maskedinput.js"></script>
 
-    <!-- CSS -->
+    <!-- CSS &ndash;&gt;
     <link href="../static/style.css" rel="stylesheet" crossorigin="anonymous">
 
-    <!-- FontAwesome Icons -->
-    <!-- https://fontawesome.com/icons -->
+    <!-- FontAwesome Icons &ndash;&gt;
+    <!-- https://fontawesome.com/icons &ndash;&gt;
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-</head>
+</head>-->
 
+<#import "parts/common.ftl" as c>
+
+<@c.page>
 <body id="main_content">
 
 <!-- Modal Window -->
@@ -137,7 +140,7 @@
                     </a>
                 </li>
                 <li class="nav_link">
-                    <a class="nav_link_text_icon employee_link" href="#">
+                    <a class="nav_link_text_icon employee_link" href="/employee">
                         <i class='bx bxs-user-badge'></i>
                         <span class="nav_link_text">For Employees</span>
                     </a>
@@ -165,7 +168,7 @@
 
             <footer class="nav_bar_footer">
                 <li class="nav_link join_our_team">
-                    <a href="#" class="nav_link_text_icon">
+                    <a href="/join" class="nav_link_text_icon">
                         <i class='bx bx-user-plus'></i>
                         <span class="nav_link_text">Join our team</span>
                     </a>
@@ -557,7 +560,7 @@
 
 <!-- Optional JS scripts -->
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+<#--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
@@ -565,7 +568,9 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>-->
 
 </body>
-</html>
+</@c.page>
+<#--
+</html>-->

@@ -43,11 +43,20 @@ public class RequestController {
     }
 
     /*
-    * Opening log-in page for employees.
+    * Verification control for employees.
     * */
+    @RequestMapping(value = "/employee", method = RequestMethod.POST)
+    public String employeeVerification() {
+        return "redirect:/employee";
+    }
+
+    /*
+    * Opening employee log-in page.
+    * */
+
     @RequestMapping(value = "/employee", method = RequestMethod.GET)
     public String employeePage() {
-        return "employee";
+        return "redirect:/employee";
     }
 
     /*
