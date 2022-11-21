@@ -4,13 +4,18 @@ import com.web.computerservice.model.Employee;
 import com.web.computerservice.repo.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Service("employeeService")
 @Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
+    @PersistenceContext
+    private EntityManager entityManager;
     private final EmployeeRepository employeeRepository;
+
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
@@ -70,4 +75,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteAllEmployees(Iterable<Employee> employees) {
         employeeRepository.deleteAll(employees);
     }
+
+    @Override
+    public Employee queryFindEmployeeById(Long id) {
+        return (Employee) entityManager.createQuery("FROM employee as e where e.id = :id");
+    }
+
+
 }

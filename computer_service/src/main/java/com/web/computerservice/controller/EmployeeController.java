@@ -1,5 +1,8 @@
 package com.web.computerservice.controller;
 
+import com.web.computerservice.exceptions.ErrorDto;
+import com.web.computerservice.model.Employee;
+import com.web.computerservice.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -13,6 +16,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/employee")
 public class EmployeeController {
     private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
+
+    private final EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     /*
      * Verification control for employees.
@@ -36,6 +45,16 @@ public class EmployeeController {
     @RequestMapping(value = "/employee/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteEmployee(@PathVariable("id") long id) {
         logger.info("");
+
+        Employee employee = employeeService.findEmployeeById(id);
+        if (employee == null) {
+            logger.error("Unable to delete Employee. Employee with id  " + id + " was not found.");
+            return new ResponseEntity<>(
+                    new ErrorDto("Unable to delete Employee. Employee with id " + id + " was not found."),
+                    HttpStatus.NOT_FOUND
+            );
+        }
+        employeeService.deleteEmployeeById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

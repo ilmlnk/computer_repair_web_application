@@ -48,15 +48,27 @@ public class Employee {
     )
     private String phoneNumber;
     @Column(
-            name = "login",
+            name = "employee_email",
             nullable = false,
             columnDefinition = "TEXT"
     )
-    private String login;
+    private String email;
     @Column(
-            name = "password",
+            name = "login",
             nullable = false,
-            columnDefinition = "PASSWORD"
+            columnDefinition = "TEXT",
+            unique = true
     )
-    private String password;
+    private String login;
+
+    /*
+    * Storing password in char array to save passwords for employee securely
+    * */
+
+    @Column(
+            name="encrypted_password",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
+    private char[] encryptedPassword;
 }

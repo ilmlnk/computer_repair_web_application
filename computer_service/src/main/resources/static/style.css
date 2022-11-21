@@ -909,3 +909,10 @@ transform: translate(-50%, -50%) scale(1.25);
     margin-right: 12em;
 }
 
+
+
+/* Error Page Style */
+.error_content {
+    display: flex;
+    justify-content: center;
+}

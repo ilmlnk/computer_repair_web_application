@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,14 +33,25 @@ public class RequestController {
     /*
     * Creating new request in modal window.
     * */
-    @RequestMapping(value = "/new_request")
-    public String showForm(@Valid Request request, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            logger.error("Unable to create new request.");
-            return "error";
-        }
+    @RequestMapping(value = "/new_request", method = RequestMethod.POST)
+    public String showForm(@RequestParam String name, @RequestParam String surname, @RequestParam String phone) {
+        logger.info("Creating new Request.");
+
+        Request request = new Request();
+        request.setName(name);
+        request.setSurname(surname);
+        request.setPhoneNumber(phone);
+
         requestRepository.save(request);
         return "index";
+    }
+
+    /*
+    * Open page for employees
+    * */
+    @RequestMapping(value = "/employee")
+    public String openEmployeePage() {
+        return "employee";
     }
 
 }

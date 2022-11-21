@@ -1,4 +1,4 @@
-package com.web.computerservice.controller;
+package com.web.computerservice.rest;
 
 import com.web.computerservice.exceptions.ErrorDto;
 import com.web.computerservice.model.Request;
@@ -74,7 +74,7 @@ public class RestApiController {
 
         Request request = requestService.findRequestById(id);
         if (request == null) {
-            logger.info("Unable to delete Request. Request with id {} was not found.", id);
+            logger.error("Unable to delete Request. Request with id {} was not found.", id);
             return new ResponseEntity<>(
                     new ErrorDto("Unable to delete Request. Request with id " + id + " was not found."),
                     HttpStatus.NOT_FOUND);

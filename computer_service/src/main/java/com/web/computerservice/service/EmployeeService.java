@@ -14,4 +14,5 @@ public interface EmployeeService {
     void deleteAllEmployeesById(Iterable<Long> ids);
     void deleteAllEmployees();
     void deleteAllEmployees(Iterable<Employee> employees);
+    Employee queryFindEmployeeById(Long id);
 }

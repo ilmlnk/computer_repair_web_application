@@ -11,7 +11,7 @@
 - PostgreSQL;
 - Liquibase; 
 - Java Persistence API;
-- FreeMarker;
+- JSP (Java Server Page);
 - Log4j and SLF4j (logging);
 - REST API.
 
