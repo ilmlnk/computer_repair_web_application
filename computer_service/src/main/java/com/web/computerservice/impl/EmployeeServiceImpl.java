@@ -7,10 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
+    @PersistenceContext
+    private EntityManager entityManager;
     private EmployeeRepository employeeRepository;
     private final PasswordEncoder passwordEncoder;
+
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository, PasswordEncoder passwordEncoder) {
         this.employeeRepository = employeeRepository;
@@ -40,6 +48,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findEmployeeBySurname(String surname) {
+        return null;
+    }
+
+    @Override
+    public Employee findEmployeeByEmail(String email) {
+        return null;
+    }
+
+    @Override
+    public Employee findEmployeeByPhoneNumber(String phone) {
         return null;
     }
 
@@ -86,5 +104,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public boolean isEmployeeExists(Employee employee) {
         return false;
+    }
+
+    public Employee queryFindEmployeeById(Long id) {
+        return (Employee) entityManager.createQuery("FROM employee as e where e.id = :id");
     }
 }
