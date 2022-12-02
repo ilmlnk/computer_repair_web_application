@@ -9,7 +9,3 @@ create table requests
     request_date date         not null,
     request_time time         not null
 );
-
-
-
--- GO
