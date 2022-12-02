@@ -10,12 +10,12 @@ public class ErrorController {
     @RequestMapping(value = "/404")
     public String unreachedPage(Model model) {
         model.addAttribute("error", "Error 404");
-        return "error";
+        return "/error.ftl";
     }
 
     @RequestMapping(value = "/500")
     public String internalServerErrorPage(Model model) {
         model.addAttribute("error", "Error 500");
-        return "error";
+        return "/error.ftl";
     }
 }

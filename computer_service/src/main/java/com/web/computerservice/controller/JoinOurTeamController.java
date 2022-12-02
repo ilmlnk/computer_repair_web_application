@@ -2,7 +2,6 @@ package com.web.computerservice.controller;
 
 import com.web.computerservice.model.Employee;
 import com.web.computerservice.service.EmployeeService;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -24,7 +23,7 @@ public class JoinOurTeamController {
 
     @RequestMapping(value = {"/join_team", "/join_team/main"}, method = RequestMethod.GET)
     public String joinOurTeamPage() {
-        return "join-team";
+        return "/join-team.ftl";
     }
 
     @RequestMapping(value = "/join_team", method = RequestMethod.POST)
@@ -46,7 +45,7 @@ public class JoinOurTeamController {
 
         if (result.hasErrors()) {
             model.addAttribute("employee", employee);
-            return "join-team";
+            return "/join-team.ftl";
         }
         employeeService.saveEmployee(employee);
         return "redirect:/join_team?success";

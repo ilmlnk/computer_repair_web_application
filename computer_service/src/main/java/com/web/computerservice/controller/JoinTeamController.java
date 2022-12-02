@@ -4,7 +4,6 @@ import com.web.computerservice.model.Employee;
 import com.web.computerservice.repo.EmployeeRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,7 +24,7 @@ public class JoinTeamController {
      * */
     @RequestMapping(value = "/join_us", method = RequestMethod.GET)
     public String joinTeamPage() {
-        return "join-team";
+        return "/join-team.ftl";
     }
 
     /*

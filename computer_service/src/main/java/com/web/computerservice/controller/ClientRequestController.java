@@ -36,7 +36,7 @@ public class ClientRequestController {
     public String showForm(@Valid ClientRequest clientRequest, BindingResult result, Model model) {
         if (result.hasErrors()) {
             logger.error("Unable to create new clientRequest.");
-            return "error";
+            return "/error.ftl";
         }
         clientRequestRepository.save(clientRequest);
         return "index";
@@ -55,7 +55,7 @@ public class ClientRequestController {
     * */
     @RequestMapping(value = "/join", method = RequestMethod.GET)
     public String joinTeamPage() {
-        return "join-team";
+        return "/join-team.ftl";
     }
 
 }
