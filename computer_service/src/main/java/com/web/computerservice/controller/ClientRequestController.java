@@ -1,7 +1,7 @@
 package com.web.computerservice.controller;
 
-import com.web.computerservice.model.Request;
-import com.web.computerservice.repo.RequestRepository;
+import com.web.computerservice.model.ClientRequest;
+import com.web.computerservice.repo.ClientRequestRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @Controller
-public class RequestController {
-    private static final Logger logger = LoggerFactory.getLogger(RequestController.class);
+public class ClientRequestController {
+    private static final Logger logger = LoggerFactory.getLogger(ClientRequestController.class);
 
-    private final RequestRepository requestRepository;
+    private final ClientRequestRepository clientRequestRepository;
 
-    public RequestController(RequestRepository requestRepository) {
-        this.requestRepository = requestRepository;
+    public ClientRequestController(ClientRequestRepository clientRequestRepository) {
+        this.clientRequestRepository = clientRequestRepository;
     }
 
     /*
@@ -30,15 +30,15 @@ public class RequestController {
     }
 
     /*
-    * Creating new request in modal window.
+    * Creating new clientRequest in modal window.
     * */
     @RequestMapping(value = "/new_request")
-    public String showForm(@Valid Request request, BindingResult result, Model model) {
+    public String showForm(@Valid ClientRequest clientRequest, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            logger.error("Unable to create new request.");
+            logger.error("Unable to create new clientRequest.");
             return "error";
         }
-        requestRepository.save(request);
+        clientRequestRepository.save(clientRequest);
         return "index";
     }
 

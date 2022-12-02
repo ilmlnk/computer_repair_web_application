@@ -37,7 +37,7 @@
         <div class="modal_window_header">
             <div class="close_btn" onclick="document.getElementById('modal_popup').style.display='none'"
                  id="close">&times;</div>
-            <h2>Create request</h2>
+            <h2>Create clientRequest</h2>
             <p>Leave your contacts and we will go around in short time!</p>
         </div>
         <div class="modal_window_content">
@@ -357,7 +357,7 @@
             <!-- Contact Us text -->
             <div class="contact_us_content">
                 <h1>You will have your PC configured today!</h1>
-                <p>Simply leave your request and we will contact you after while.</p>
+                <p>Simply leave your clientRequest and we will contact you after while.</p>
             </div>
 
             <button type="button" class="create_request btn btn-primary contact_us" data-toggle="modal"

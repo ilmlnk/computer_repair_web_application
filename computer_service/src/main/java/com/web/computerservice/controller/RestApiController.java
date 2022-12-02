@@ -1,8 +1,8 @@
 package com.web.computerservice.controller;
 
 import com.web.computerservice.exceptions.ErrorDto;
-import com.web.computerservice.model.Request;
-import com.web.computerservice.service.RequestService;
+import com.web.computerservice.model.ClientRequest;
+import com.web.computerservice.service.ClientRequestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -18,75 +18,75 @@ public class RestApiController {
 
     public static final Logger logger = LoggerFactory.getLogger(RestApiController.class);
 
-    public final RequestService requestService;
+    public final ClientRequestService clientRequestService;
 
-    public RestApiController(RequestService requestService) {
-        this.requestService = requestService;
+    public RestApiController(ClientRequestService clientRequestService) {
+        this.clientRequestService = clientRequestService;
     }
 
     @RequestMapping(value = "/request/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getRequest(@PathVariable("id") long id) {
-        logger.info("Fetching Request with id {}", id);
-        Request request = requestService.findRequestById(id);
+        logger.info("Fetching ClientRequest with id {}", id);
+        ClientRequest clientRequest = clientRequestService.findRequestById(id);
 
-        if (request == null) {
-            logger.error("Cannot find Request with id {}", id);
-            return new ResponseEntity<>(new ErrorDto("Cannot find Request with id: " + id + " not found."),
+        if (clientRequest == null) {
+            logger.error("Cannot find ClientRequest with id {}", id);
+            return new ResponseEntity<>(new ErrorDto("Cannot find ClientRequest with id: " + id + " not found."),
                     HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(request, HttpStatus.OK);
+        return new ResponseEntity<>(clientRequest, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/request/", method = RequestMethod.GET)
-    public ResponseEntity<?> createRequest(@RequestBody Request request, UriComponentsBuilder ucBuilder) {
-        logger.info("Creating new Request {}", request);
-        requestService.saveRequest(request);
+    public ResponseEntity<?> createRequest(@RequestBody ClientRequest clientRequest, UriComponentsBuilder ucBuilder) {
+        logger.info("Creating new ClientRequest {}", clientRequest);
+        clientRequestService.saveRequest(clientRequest);
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/api/request/{id}").buildAndExpand(request.getId()).toUri());
+        headers.setLocation(ucBuilder.path("/api/clientRequest/{id}").buildAndExpand(clientRequest.getId()).toUri());
         return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/request/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<?> updateRequest(@PathVariable("id") long id, @RequestBody Request request) {
-        logger.info("Updating Request with id {}", id);
+    public ResponseEntity<?> updateRequest(@PathVariable("id") long id, @RequestBody ClientRequest clientRequest) {
+        logger.info("Updating ClientRequest with id {}", id);
 
-        Request currentRequest = requestService.findRequestById(id);
-        if (currentRequest == null) {
-            logger.error("Unable to update. Request with id {} was not found.", id);
+        ClientRequest currentClientRequest = clientRequestService.findRequestById(id);
+        if (currentClientRequest == null) {
+            logger.error("Unable to update. ClientRequest with id {} was not found.", id);
             return new ResponseEntity<>(new ErrorDto(
-                    "Unable to update. Request with id " + id + " was not found."), HttpStatus.NOT_FOUND);
+                    "Unable to update. ClientRequest with id " + id + " was not found."), HttpStatus.NOT_FOUND);
         }
 
-        currentRequest.setName(request.getName());
-        currentRequest.setSurname(request.getSurname());
-        currentRequest.setPhoneNumber(request.getPhoneNumber());
-        currentRequest.setRequestDate(request.getRequestDate());
-        currentRequest.setRequestTime(request.getRequestTime());
+        currentClientRequest.setName(clientRequest.getName());
+        currentClientRequest.setSurname(clientRequest.getSurname());
+        currentClientRequest.setPhoneNumber(clientRequest.getPhoneNumber());
+        currentClientRequest.setRequestDate(clientRequest.getRequestDate());
+        currentClientRequest.setRequestTime(clientRequest.getRequestTime());
 
-        requestService.updateRequest(currentRequest);
+        clientRequestService.updateRequest(currentClientRequest);
 
-        return new ResponseEntity<>(currentRequest, HttpStatus.OK);
+        return new ResponseEntity<>(currentClientRequest, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/request/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteRequest(@PathVariable("id") long id) {
-        logger.info("Deleting Request with id {}", id);
+        logger.info("Deleting ClientRequest with id {}", id);
 
-        Request request = requestService.findRequestById(id);
-        if (request == null) {
-            logger.info("Unable to delete Request. Request with id {} was not found.", id);
+        ClientRequest clientRequest = clientRequestService.findRequestById(id);
+        if (clientRequest == null) {
+            logger.info("Unable to delete ClientRequest. ClientRequest with id {} was not found.", id);
             return new ResponseEntity<>(
-                    new ErrorDto("Unable to delete Request. Request with id " + id + " was not found."),
+                    new ErrorDto("Unable to delete ClientRequest. ClientRequest with id " + id + " was not found."),
                     HttpStatus.NOT_FOUND);
         }
-        requestService.deleteRequestById(id);
+        clientRequestService.deleteRequestById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @RequestMapping(value = "/request/", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteAllRequests() {
         logger.info("Deleting all Requests.");
-        requestService.deleteAllRequests();
+        clientRequestService.deleteAllRequests();
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

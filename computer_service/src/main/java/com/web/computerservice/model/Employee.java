@@ -48,15 +48,20 @@ public class Employee {
     )
     private String phoneNumber;
     @Column(
+            name = "employee_email",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
+    private String email;
+    @Column(
             name = "login",
             nullable = false,
             columnDefinition = "TEXT"
     )
     private String login;
     @Column(
-            name = "password",
-            nullable = false,
-            columnDefinition = "PASSWORD"
+            name = "encrypted_password",
+            nullable = false
     )
     private String password;
 }

@@ -18,7 +18,7 @@ import static javax.persistence.GenerationType.SEQUENCE;
 @Table(
         name = "requests"
 )
-public class Request {
+public class ClientRequest {
     @Id
     @SequenceGenerator(
             name = "request_sequence",
@@ -63,8 +63,8 @@ public class Request {
     )
     private LocalTime requestTime;
 
-    public Request(String name, String surname, String phoneNumber,
-                   LocalDate requestDate, LocalTime requestTime) {
+    public ClientRequest(String name, String surname, String phoneNumber,
+                         LocalDate requestDate, LocalTime requestTime) {
         this.name = name;
         this.surname = surname;
         this.phoneNumber = phoneNumber;
